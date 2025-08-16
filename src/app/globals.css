@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "tailwindcss";
-@import "tailwindcss-animate";
+/* NOTE:
+   Verwijderd: `@import "tailwindcss";` en `@import "tailwindcss-animate"`.
+   Die horen in de build-config (tailwind.config + postcss), niet hier.
+*/
 
 :root {
   --background: 0 0% 100%;
@@ -70,10 +72,15 @@
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+  html, body, #__next { height: 100%; }
+  html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; }
+  ::selection { @apply bg-emerald-200 text-black; }
+}
+
+/* Niet-klikbare decoratieve lagen */
+.decor, .bg-decor, .image-decor {
+  pointer-events: none;
+  user-select: none;
 }
