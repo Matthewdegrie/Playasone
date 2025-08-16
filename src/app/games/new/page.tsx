@@ -8,6 +8,7 @@ import { supabase } from '@/app/lib/supabaseClient';
 type LeagueRow = { id: string; name: string | null };
 type MemberRow = { user_id: string; label: string };
 
+export const dynamic = 'force-dynamic';
 export default function AddGamePage() {
   const router = useRouter();
   const search = useSearchParams();
