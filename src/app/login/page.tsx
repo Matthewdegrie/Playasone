@@ -1,17 +1,15 @@
-// src/app/login/page.tsx
+// Server component (no "use client" here)
 import { Suspense } from 'react';
 import LoginClient from './LoginClient';
 
 export const metadata = {
-  title: 'Login',
+  title: 'Log in',
 };
 
 export default function LoginPage() {
   return (
-    <main className="min-h-[60vh]">
-      <Suspense fallback={<div className="p-6 text-white/70">Laden…</div>}>
-        <LoginClient />
-      </Suspense>
-    </main>
+    <Suspense fallback={<div className="p-6 text-sm text-muted-foreground">Laden…</div>}>
+      <LoginClient />
+    </Suspense>
   );
 }
