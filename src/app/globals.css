@@ -1,11 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* NOTE:
-   Verwijderd: `@import "tailwindcss";` en `@import "tailwindcss-animate"`.
-   Die horen in de build-config (tailwind.config + postcss), niet hier.
-*/
+@import tailwindcss;
 
 :root {
   --background: 0 0% 100%;

@@ -1,16 +1,7 @@
+// postcss.config.js
+// Tailwind v4 setup: gebruik de nieuwe '@tailwindcss/postcss' plugin.
 module.exports = {
   plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
-};
-/** PostCSS config
- * Make sure this file is named `postcss.config.js` (no trailing dot)
- * and lives in the project root so Vercel/Next can detect it.
- */
-module.exports = {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
+    '@tailwindcss/postcss': {},
   },
 };
